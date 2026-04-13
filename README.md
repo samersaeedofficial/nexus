@@ -116,14 +116,3 @@ Only the source code, project config, and documentation will be tracked.
   ```bash
   PORT=4000 npm start
   ```
-
-## Ready for GitHub
-
-Once your changes are complete, commit from the repository root and push to GitHub:
-
-```bash
-git status
-git add .
-git commit -m "Prepare app for GitHub push with updated setup docs and ignore rules"
-git push origin main
-```
