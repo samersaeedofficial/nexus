@@ -1,0 +1,22 @@
+# Node
+node_modules/
+Source/node_modules/
+
+# Build outputs
+dist/
+Source/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.*
+
+# OS files
+.DS_Store
+
+# Editor files
+.vscode/
