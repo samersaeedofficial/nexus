@@ -1,118 +1,58 @@
-# Nexus Evil Twib Tool
+# ⚡ NEXUS EVIL TWIB TOOL
+> **Industrial-Grade Automated Rogue AP Deployment & Intelligence Suite.**
 
-This repository contains a React + Vite portal application and a Node.js backend server for secure network authentication and data capture.
+[![Version](https://img.shields.io/badge/Version-2.0.0--Stable-cyan.svg?style=for-the-badge)]()
+[![OS](https://img.shields.io/badge/OS-Kali--Linux-red.svg?style=for-the-badge)]()
+[![Platform](https://img.shields.io/badge/Platform-Node.js%20%26%20Bash-green.svg?style=for-the-badge)]()
 
-## Structure
+---
 
-- `Source/` - React application source, Vite config, backend server file, and app assets.
-- `Source/src/` - React app source code.
-- `Source/server.js` - Express backend for `/api` endpoints and static asset serving.
-- `Source/network_config.json` - Network settings used by the portal.
-- `server.js` - Root copy of the same backend server for production or local hosting.
-- `dist/` - Built production output.
+## 💎 Overview
+Nexus Evil Twib Tool ek advanced, "One-Command" tactical tool hai jo full-stack web technologies (React/Vite) aur low-level Linux networking ko merge karta hai. Ye tool specifically penetration testers aur research purposes ke liye banaya gaya hai, jo captive portal deployment aur network monitoring ko fully automate kar deta hai.
 
-## Fixes Applied
+---
 
-- Updated `Source/package.json` to use `date-fns@^3.6.0`, resolving the peer dependency conflict with `react-day-picker`.
-- Added a `start` script in `Source/package.json` to run `node server.js`.
-- Added a Vite dev proxy for `/api` endpoints so the app can call the backend during local development.
-- Updated backend server files to use `process.env.PORT || 3000` for easier local startup.
-- Made backend config loading robust by resolving `network_config.json` from the server directory.
-- Updated server startup logs to display the actual listening port.
+## 🔥 Key Features
+* **🚀 Full Auto-Build System:** Script khud hi `Source` folder se fresh build generate karti hai.
+* **📊 Live Terminal Dashboard:** Real-time device tracking aur credential capturing.
+* **🎨 Premium Captive Portal:** Modern React-based UI (Framer Motion & Tailwind CSS).
+* **🛠️ System-Wide Installation:** Pure system main kahi se bhi access karnay ke liye `nexus` command setup.
+* **💉 Automated Routing:** Iptables aur DNS hijacking ki automatic configuration.
 
-## Prerequisites
+---
 
-- Node.js 18 or later
-- npm 10 or later
-- A terminal/command prompt
+## 📂 Project Structure
+```text
+├── Source/                   # Core Application Source
+│   ├── src/                  # React Frontend Code
+│   ├── server.js             # Express Backend Logic
+│   └── package.json          # Dependency Management
+├── nexus_wifi_app.sh         # The "Brain" (Automated Bash Script)
+├── dist/                     # Production Output (Generated)
+└── captured_data.log         # Secure Logs for Captured Intel
 
-## Clone the repository
 
-From your computer, run:
+Fully Automated Setup
 
-```bash
-git clone <your-repo-url> nexus_evil_twib_tool
-cd nexus_evil_twib_tool
-```
+You no longer need to manually install Node modules, build the frontend, or manage separate terminals. The master bash script handles everything automatically, ensuring a clean and production-ready environment (optimized for systems like Kali Linux).
 
-## Setup and install dependencies
+### Prerequisites
 
-1. Open the terminal in the project root:
+- A Linux environment (Root privileges required)
+- An active internet connection for the initial setup
+- A compatible wireless network adapter
+
+### 1-Click Installation
+
+1. **Clone the repository:**
    ```bash
-   cd /home/samer/nexus_evil_twib_tool
-   ```
+   git clone [https://github.com/samersaeedofficial/nexus.git](https://github.com/samersaeedofficial/nexus.git)
 
-2. Install the app dependencies from the `Source` folder:
+2. **Installation Process:**
    ```bash
-   cd Source
-   npm install
-   ```
+   cd nexus
+   sudo ./nexus_wifi_app.sh install
 
-## Run in development mode
-
-Open two terminals and run these commands.
-
-Terminal 1: start the React app:
-
-```bash
-cd /home/samer/nexus_evil_twib_tool/Source
-npm run dev
-```
-
-Terminal 2: start the backend server:
-
-```bash
-cd /home/samer/nexus_evil_twib_tool/Source
-npm start
-```
-
-Then open the browser at:
-
-```bash
-http://localhost:5173
-```
-
-> The backend server listens on `http://localhost:3000` by default.
-
-## Production build
-
-1. Build the React app:
+3. **Run App:**
    ```bash
-   cd /home/samer/nexus_evil_twib_tool/Source
-   npm run build
-   ```
-
-2. Serve the built app with the backend server:
-   ```bash
-   cd /home/samer/nexus_evil_twib_tool/Source
-   npm start
-   ```
-
-3. Open the browser at:
-   ```bash
-   http://localhost:3000
-   ```
-
-## GitHub push and ignored files
-
-This repository includes a `.gitignore` file that prevents the following from being pushed to GitHub:
-
-- `node_modules/`
-- `Source/node_modules/`
-- `dist/`
-- `Source/dist/`
-- `npm-debug.log*`, `yarn-debug.log*`, `yarn-error.log*`
-- `.DS_Store`
-- `.env` and other environment files
-
-Only the source code, project config, and documentation will be tracked.
-
-## Notes
-
-- The backend server exposes `/api/network-info`, `/api/save-password`, and `/api/save-registration`.
-- The React app fetches `/api/network-info` on load and submits password and registration data to the backend.
-- Use `Source/server.js` when running locally from the `Source` folder.
-- If you want to use a different backend port, set `PORT` before starting the server, for example:
-  ```bash
-  PORT=4000 npm start
-  ```
+   nexus

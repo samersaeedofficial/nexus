@@ -91,13 +91,33 @@ EOF
     (cd /opt/nexus_ap && npm install > /dev/null 2>&1)
     echo -e "${GREEN}  [+] Installed required Node modules globally.${NC}"
 
-    # Check and move dist folder
-    if [ -d "$APP_HOME/dist" ]; then
-        cp -r "$APP_HOME/dist" /opt/nexus_ap/
-        echo -e "${GREEN}  [+] Copied 'dist' UI assets to /opt/nexus_ap/dist${NC}"
+    # ==========================================
+    # DYNAMIC UI BUILD SYSTEM
+    # ==========================================
+    if [ -d "$APP_HOME/Source" ]; then
+        echo -e "${YELLOW}  [*] 'Source' directory found. Building UI from scratch...${NC}"
+        cd "$APP_HOME/Source" || exit
+        
+        echo -e "${BLUE}      -> Running npm install...${NC}"
+        npm install > /dev/null 2>&1
+        
+        echo -e "${BLUE}      -> Generating production build (npm run build)...${NC}"
+        npm run build > /dev/null 2>&1
+        
+        cd "$APP_HOME" || exit
+        
+        if [ -d "$APP_HOME/Source/dist" ]; then
+            # Remove old dist if it exists, then copy the fresh one
+            rm -rf /opt/nexus_ap/dist
+            cp -r "$APP_HOME/Source/dist" /opt/nexus_ap/
+            echo -e "${GREEN}  [+] UI build successful! Permanently saved 'dist' folder to /opt/nexus_ap/dist${NC}"
+        else
+            echo -e "${RED}  [!] Warning: Build finished but 'dist' folder was not generated inside 'Source'. UI won't load properly.${NC}"
+        fi
     else
-        echo -e "${RED}  [!] Warning: 'dist' folder not found in current directory. UI won't load properly.${NC}"
+        echo -e "${RED}  [!] Warning: 'Source' folder not found in $APP_HOME. Cannot build the UI.${NC}"
     fi
+    # ==========================================
 
     # Create global command
     cp "$0" /usr/local/bin/nexus
