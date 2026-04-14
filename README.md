@@ -13,11 +13,44 @@
 ---
 
 ## 🔥 Key Features
-* **🚀 Full Auto-Build System:** Automatically generates a production-ready build from the React source using an integrated pipeline.
-* **📊 Live Terminal Dashboard:** High-fidelity tracking of connected devices and real-time credential exfiltration.
-* **🎨 Premium Captive Portal:** A modern, high-conversion UI built with **React**, **Framer Motion**, and **Tailwind CSS**.
-* **🛠️ System-Wide Integration:** Installs as a global binary, allowing you to trigger the `nexus` command from any terminal path.
-* **💉 Automated Routing:** Seamless traffic hijacking via pre-configured `iptables` and DNS redirection.
+*   **🚀 Full Auto-Build System:** Automatically generates a production-ready build from the React source using an integrated pipeline.
+*   **📊 Live Terminal Dashboard:** High-fidelity tracking of connected devices and real-time credential exfiltration.
+*   **🎨 Premium Captive Portal:** A modern, high-conversion UI built with **React**, **Framer Motion**, and **Tailwind CSS**.
+*   **🛠️ System-Wide Integration:** Installs as a global binary, allowing you to trigger the `nexus` command from any terminal path.
+*   **💉 Automated Routing:** Seamless traffic hijacking via pre-configured `iptables` and DNS redirection.
+
+---
+
+## 🛠️ Automated Setup
+You no longer need to manually install Node modules, build the frontend, or manage separate terminals. The master bash script handles everything automatically, ensuring a clean and production-ready environment optimized for Kali Linux.
+
+### 📋 Prerequisites
+*   A Linux environment (**Root privileges required**)
+*   An active internet connection for the initial setup
+*   A compatible wireless network adapter (Support for Monitor Mode/AP Mode)
+
+---
+
+## 🚀 Installation & Usage
+
+### 1-Click Installation
+Follow these steps to get Nexus up and running:
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/samersaeedofficial/nexus.git
+```
+
+2. **Navigate and Install:**
+```bash
+cd nexus
+sudo ./nexus_wifi_app.sh install
+```
+
+3. **Launch the Suite:**
+```bash
+nexus
+```
 
 ---
 
@@ -30,28 +63,9 @@
 ├── nexus_wifi_app.sh         # The "Brain" (Master Automation Script)
 ├── dist/                     # Production Build Output (Auto-generated)
 └── captured_data.log         # Secure Logs for Captured Intelligence
+```
 
-Fully Automated Setup
+---
 
-You no longer need to manually install Node modules, build the frontend, or manage separate terminals. The master bash script handles everything automatically, ensuring a clean and production-ready environment (optimized for systems like Kali Linux).
-
-### Prerequisites
-
-- A Linux environment (Root privileges required)
-- An active internet connection for the initial setup
-- A compatible wireless network adapter
-
-### 1-Click Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/samersaeedofficial/nexus.git](https://github.com/samersaeedofficial/nexus.git)
-
-2. **Installation Process:**
-   ```bash
-   cd nexus
-   sudo ./nexus_wifi_app.sh install
-
-3. **Run App:**
-   ```bash
-   nexus
+## ⚠️ Disclaimer
+This tool is for educational purposes and authorized security auditing only. The developer is not responsible for any misuse or damage caused by this program. Use responsibly.
