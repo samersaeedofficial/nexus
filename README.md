@@ -1,4 +1,4 @@
-# ⚡ NEXUS EVIL TWIB TOOL
+# ⚡ NEXUS EVIL TWIN
 > **Industrial-Grade Automated Rogue AP Deployment & Intelligence Suite.**
 
 [![Version](https://img.shields.io/badge/Version-2.0.0--Stable-cyan.svg?style=for-the-badge)]()
@@ -8,29 +8,28 @@
 ---
 
 ## 💎 Overview
-Nexus Evil Twib Tool ek advanced, "One-Command" tactical tool hai jo full-stack web technologies (React/Vite) aur low-level Linux networking ko merge karta hai. Ye tool specifically penetration testers aur research purposes ke liye banaya gaya hai, jo captive portal deployment aur network monitoring ko fully automate kar deta hai.
+**Nexus Evil Twin** is an advanced, "one-command" tactical suite that bridges the gap between modern full-stack web technologies and low-level Linux networking. Designed for penetration testers and security researchers, it automates the deployment of sophisticated captive portals and provides a streamlined interface for real-time network monitoring and intelligence gathering.
 
 ---
 
 ## 🔥 Key Features
-* **🚀 Full Auto-Build System:** Script khud hi `Source` folder se fresh build generate karti hai.
-* **📊 Live Terminal Dashboard:** Real-time device tracking aur credential capturing.
-* **🎨 Premium Captive Portal:** Modern React-based UI (Framer Motion & Tailwind CSS).
-* **🛠️ System-Wide Installation:** Pure system main kahi se bhi access karnay ke liye `nexus` command setup.
-* **💉 Automated Routing:** Iptables aur DNS hijacking ki automatic configuration.
+* **🚀 Full Auto-Build System:** Automatically generates a production-ready build from the React source using an integrated pipeline.
+* **📊 Live Terminal Dashboard:** High-fidelity tracking of connected devices and real-time credential exfiltration.
+* **🎨 Premium Captive Portal:** A modern, high-conversion UI built with **React**, **Framer Motion**, and **Tailwind CSS**.
+* **🛠️ System-Wide Integration:** Installs as a global binary, allowing you to trigger the `nexus` command from any terminal path.
+* **💉 Automated Routing:** Seamless traffic hijacking via pre-configured `iptables` and DNS redirection.
 
 ---
 
 ## 📂 Project Structure
 ```text
 ├── Source/                   # Core Application Source
-│   ├── src/                  # React Frontend Code
-│   ├── server.js             # Express Backend Logic
+│   ├── src/                  # React Frontend (Vite)
+│   ├── server.js             # Express.js Backend Logic
 │   └── package.json          # Dependency Management
-├── nexus_wifi_app.sh         # The "Brain" (Automated Bash Script)
-├── dist/                     # Production Output (Generated)
-└── captured_data.log         # Secure Logs for Captured Intel
-
+├── nexus_wifi_app.sh         # The "Brain" (Master Automation Script)
+├── dist/                     # Production Build Output (Auto-generated)
+└── captured_data.log         # Secure Logs for Captured Intelligence
 
 Fully Automated Setup
 
